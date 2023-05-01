@@ -1,0 +1,189 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3 {
+    overflow-wrap: break-word;
+  }
+:root {
+/* ### Primary */
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+/* ### Neutral */
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+body {
+    background-color: var(--Light-grayish-blue);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+  main {
+    display: grid;
+    grid-gap:2rem;
+    padding: 0;
+    width: min(95%, 75rem);    
+}
+
+section {
+    background-color: lightcoral;
+    color: rgb(17, 82, 102);
+    border-radius: 8px;
+    padding: 1.2rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    
+}
+
+/* section:last-child {
+  grid-column-start: 4;
+  grid-row-start:1 ;
+  grid-row-end: 3;
+} */
+
+section picture {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.word_wrap {
+    padding: 1px;
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+
+
+/* .under {
+    color: var(--Soft-Pink)
+} */
+
+/* generall style for images */
+section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* first container style */
+.first_one {
+    background-color: var(--Moderate-violet);
+    color: var(--White);
+    position: relative;
+}
+
+.first_one img, .fourth_four img {
+    border: 3px solid hsl(263, 54%, 58%);
+}
+
+p {
+    opacity: 50%;
+}
+
+
+.quotation {
+    content: url(./images/bg-pattern-quotation.svg);
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 30px;
+    top: 0;
+}
+
+.first_one h2 {
+    z-index: 1;
+}
+
+/* second container style */
+.second_two {
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+
+h2 {
+    line-height: 30px;
+}
+
+/* third and fifth container style */
+
+.third_three, .fifth_five {
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+
+/* fourth container style */
+.fourth_four {
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--White);
+}
+
+@media screen and (min-width:50em) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3.5%;
+  }
+
+    section:last-child {
+      grid-column-start: 4;
+      grid-row-start:1 ;
+      grid-row-end: 3;
+    }
+   
+    .first_one, .fourth_four {
+      grid-column: span 2;
+    }
+}
