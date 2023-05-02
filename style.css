@@ -86,6 +86,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 17px;
+  
+    -webkit-box-shadow: 12px 51px 93px -47px rgba(0,0,0,0.48);
+    -moz-box-shadow: 12px 51px 93px -47px rgba(0,0,0,0.48);
+    box-shadow: 12px 51px 93px -47px rgba(0,0,0,0.48);
     
 }
 
